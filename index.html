@@ -1,0 +1,182 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="theme-color" content="#09090c">
+  <meta name="color-scheme" content="dark">
+  <meta name="description" content="A special transmission. An unusual birthday mission awaits.">
+  <meta name="robots" content="noindex, nofollow">
+  <title>Chapter 13 — The Birthday Mission</title>
+  <link rel="icon" href="assets/images/favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="styles.css">
+  <script src="script.js" defer></script>
+</head>
+<body data-step="intro">
+  <canvas id="fx" aria-hidden="true"></canvas>
+  <div class="vignette" aria-hidden="true"></div>
+
+  <header class="topbar">
+    <div class="brand" aria-hidden="true">CHAPTER <b>13</b></div>
+    <div class="progress" role="img" aria-label="Mission progress" data-progress-label>
+      <span class="progress-text" data-progress-text>TRANSMISSION</span>
+      <span class="progress-track"><span class="progress-fill" data-progress-fill></span></span>
+    </div>
+    <button class="sound" type="button" data-action="toggle-music" aria-pressed="false" aria-label="Turn background music on">
+      <svg viewBox="0 0 24 24" width="20" height="20" aria-hidden="true"><path d="M9 18V6l10-2v12" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/><circle cx="6.5" cy="18" r="2.5" fill="currentColor"/><circle cx="16.5" cy="16" r="2.5" fill="currentColor"/></svg>
+      <span class="sound-label" data-sound-label>Music off</span>
+    </button>
+  </header>
+
+  <main id="main">
+    <!-- 0 · TRANSMISSION -->
+    <section class="scene is-active" id="intro" data-scene="intro" aria-labelledby="intro-title">
+      <div class="wrap center">
+        <div class="ghost13" aria-hidden="true">13</div>
+        <p class="eyebrow"><span class="dot"></span> ALERT !!!</p>
+        <h1 id="intro-title" class="display" tabindex="-1">Someone just<br>turned <em>13…</em></h1>
+        <p class="lede">An unusual birthday mission awaits.</p>
+        <button class="btn primary" type="button" data-action="go" data-to="goat">Begin the mission <span aria-hidden="true">→</span></button>
+      </div>
+    </section>
+
+    <!-- 1 · GOAT MISSION -->
+    <section class="scene" id="goat" data-scene="goat" aria-labelledby="goat-title" hidden>
+      <div class="wrap split">
+        <div class="copy">
+          <p class="eyebrow">MISSION 001 <span class="rule"></span> CLASSIFIED</p>
+          <h2 id="goat-title" class="title" tabindex="-1">Identify the<br><em>birthday legend.</em></h2>
+          <div class="reveal-zone" data-goat-pre>
+            <button class="btn primary" type="button" data-action="reveal-goat">Reveal evidence <span aria-hidden="true">◉</span></button>
+          </div>
+          <div class="reveal-zone" data-goat-post hidden>
+            <p class="caption big">Bro really unlocked the goat era. 🐐</p>
+            <button class="btn ghost" type="button" data-action="react-goat">BRO WHAT IS THIS </button>
+            <p class="reply" data-goat-reply role="status" aria-live="polite"></p>
+            <button class="btn primary" type="button" data-action="go" data-to="emblem">Next mission <span aria-hidden="true">→</span></button>
+          </div>
+        </div>
+        <div class="media">
+          <figure class="evidence" data-evidence>
+            <div class="locked" data-goat-locked aria-hidden="true">
+              <span class="locked-q">?</span>
+              <span class="locked-tag">EVIDENCE LOCKED</span>
+              <span class="scan"></span>
+            </div>
+            <img class="evidence-img" data-goat-img src="assets/photos/goat-moment.png" width="309" height="549" alt="A boy in a red jacket drinking a green bottle at a restaurant while a white goat rests its head on his shoulder" hidden decoding="async">
+            <span class="corner tl" aria-hidden="true"></span><span class="corner tr" aria-hidden="true"></span><span class="corner bl" aria-hidden="true"></span><span class="corner br" aria-hidden="true"></span>
+            <span class="rec" data-rec aria-hidden="true">● FREEZE FRAME</span>
+            <span class="flash" data-flash aria-hidden="true"></span>
+          </figure>
+        </div>
+      </div>
+    </section>
+
+    <!-- 2 · EMBLEM -->
+    <section class="scene" id="emblem" data-scene="emblem" aria-labelledby="emblem-title" hidden>
+      <div class="wrap center">
+        <p class="eyebrow">MISSION 002 <span class="rule"></span> POWER UP</p>
+        <h2 id="emblem-title" class="title" tabindex="-1">The emblem is <em>sealed.</em></h2>
+        <p class="lede" data-emblem-hint>Tap the 13 to charge it. Three taps should do it.</p>
+        <button class="emblem" type="button" data-action="charge" aria-label="Charge the birthday emblem. Charge 0 of 3.">
+          <svg class="ring" viewBox="0 0 200 200" aria-hidden="true">
+            <circle class="ring-bg" cx="100" cy="100" r="90"/>
+            <circle class="ring-fill" cx="100" cy="100" r="90" data-ring/>
+          </svg>
+          <span class="emblem-num" aria-hidden="true">13</span>
+          <span class="emblem-lock" data-lock aria-hidden="true">LOCKED</span>
+        </button>
+        <p class="sr-only" role="status" aria-live="polite" data-charge-status></p>
+        <div class="unlock" data-unlock hidden>
+          <p class="level">LEVEL 13 UNLOCKED</p>
+          <p class="lede">Achievement unlocked: Survived another year of getting annoyed.</p>
+          <button class="btn primary" type="button" data-action="go" data-to="gallery">Continue <span aria-hidden="true">→</span></button>
+        </div>
+      </div>
+    </section>
+
+    <!-- 3 · GALLERY -->
+    <section class="scene" id="gallery" data-scene="gallery" aria-labelledby="gallery-title" hidden>
+      <div class="wrap center">
+        <p class="eyebrow">MISSION 003 <span class="rule"></span> MEMORY VAULT</p>
+        <h2 id="gallery-title" class="title small" tabindex="-1">Different moments, same <em>chaotic family energy!!!</em> </h2>
+        <ul class="gallery">
+          <li>
+            <button type="button" class="tile" data-action="open-photo" data-index="0" aria-label="Open photo: standing in front of a Lamborghini showroom, in full view">
+              <img src="assets/photos/cousin-car.png" width="278" height="549" alt="The birthday boy taking a mirror selfie in a showroom, a black sports car behind him" loading="lazy" decoding="async">
+              <span class="tile-cap"><b>01</b> Showroom mode</span>
+            </button>
+          </li>
+          <li>
+            <button type="button" class="tile" data-action="open-photo" data-index="1" aria-label="Open photo: sipping a drink at a restaurant, in full view">
+              <img src="assets/photos/cousin-drink.png" width="309" height="549" alt="The birthday boy in a red jacket sipping a green bottle at a busy restaurant" loading="lazy" decoding="async">
+              <span class="tile-cap"><b>02</b> Caught mid-sip</span>
+            </button>
+          </li>
+        </ul>
+        <div class="note-zone">
+          <button class="btn ghost" type="button" data-action="open-note" aria-expanded="false" aria-controls="hidden-note" data-note-btn>Open the hidden note <span aria-hidden="true">✉</span></button>
+          <p class="note" id="hidden-note" data-note hidden>Annoying each other is basically our cousin tradition 😂😂😂</p>
+          <button class="btn primary" type="button" data-action="go" data-to="chapter" data-after-note hidden>Next mission <span aria-hidden="true">→</span></button>
+        </div>
+      </div>
+    </section>
+
+    <!-- 4 · CHAPTER 13 BRIEFING -->
+    <section class="scene" id="chapter" data-scene="chapter" aria-labelledby="chapter-title" hidden>
+      <div class="wrap center">
+        <p class="eyebrow">MISSION 004 <span class="rule"></span> THE BRIEFING</p>
+        <h2 id="chapter-title" class="title" tabindex="-1">Chapter 13: <em>your briefing.</em></h2>
+        <p class="lede">Five tiles. Five tips for the year ahead. Tap each one.</p>
+        <ul class="wishes">
+          <li><button type="button" class="wish" data-action="wish" aria-expanded="false"><span class="wish-n">01</span><span class="wish-t">Confidence</span><span class="wish-x" hidden>Walk into every room like it already knows your name.</span></button></li>
+          <li><button type="button" class="wish" data-action="wish" aria-expanded="false"><span class="wish-n">02</span><span class="wish-t">Good friends</span><span class="wish-x" hidden>May your friends be loyal, funny, and good.</span></button></li>
+          <li><button type="button" class="wish" data-action="wish" aria-expanded="false"><span class="wish-n">03</span><span class="wish-t">Learning</span><span class="wish-x" hidden>Stay curious. Asking questions is a superpower, not a weakness.</span></button></li>
+          <li><button type="button" class="wish" data-action="wish" aria-expanded="false"><span class="wish-n">04</span><span class="wish-t">Happy memories</span><span class="wish-x" hidden>Collect good moments like they're limited edition.</span></button></li>
+          <li><button type="button" class="wish" data-action="wish" aria-expanded="false"><span class="wish-n">05</span><span class="wish-t">Self-belief</span><span class="wish-x" hidden>You're more capable than you think.</span></button></li>
+        </ul>
+        <p class="counter" data-wish-count role="status" aria-live="polite">0 of 5 revealed</p>
+        <div class="row">
+          <button class="btn quiet" type="button" data-action="reveal-all-wishes" data-reveal-all>Reveal all</button>
+          <button class="btn primary" type="button" data-action="go" data-to="premiere" data-after-wishes hidden>Unlock the premiere <span aria-hidden="true">🎬</span></button>
+        </div>
+      </div>
+    </section>
+
+    <!-- 5 · PREMIERE -->
+    <section class="scene" id="premiere" data-scene="premiere" aria-labelledby="premiere-title" hidden>
+      <div class="wrap premiere">
+        <p class="eyebrow">THE FINAL MISSION</p>
+        <h2 id="premiere-title" class="title" tabindex="-1">THE BIRTHDAY PREMIERE 🎬</h2>
+        <p class="lede">One final surprise.</p>
+        <div class="player" data-player>
+          <video id="film" controls playsinline preload="metadata" poster="assets/images/video-poster.jpg" aria-label="The birthday video, 48 seconds">
+            <source src="assets/video/birthday-video.mp4" type="video/mp4">
+          </video>
+          <div class="missing" data-missing hidden role="status">
+            <p><b>The premiere isn't ready yet.</b></p>
+            <p>The file <code>assets/video/birthday-video.mp4</code> couldn't be loaded. Make sure the folder is intact, then refresh.</p>
+          </div>
+        </div>
+        <section class="ending" data-ending hidden aria-labelledby="ending-title" tabindex="-1">
+          <h3 id="ending-title" class="ending-title">Mission complete, <em>birthday legend.</em> ❤️</h3>
+          <p>Whatever Chapter 13 brings, I hope it gives you plenty of reasons to smile.</p>
+          <p class="roast">Now go enjoy your day… before I start roasting you again.</p>
+          <button class="btn primary" type="button" data-action="replay">Replay the birthday mission <span aria-hidden="true">↻</span></button>
+        </section>
+      </div>
+    </section>
+  </main>
+
+  <dialog class="lightbox" data-lightbox aria-label="Photo viewer">
+    <button class="lb-close" type="button" data-action="close-photo" aria-label="Close photo viewer">×</button>
+    <button class="lb-nav prev" type="button" data-action="prev-photo" aria-label="Previous photo">‹</button>
+    <figure><img data-lb-img alt=""><figcaption data-lb-cap></figcaption></figure>
+    <button class="lb-nav next" type="button" data-action="next-photo" aria-label="Next photo">›</button>
+  </dialog>
+
+  <audio id="music" src="assets/audio/ambient-loop.mp3" loop preload="none"></audio>
+  <div class="toast" data-toast role="status" aria-live="polite" hidden></div>
+  <noscript><p class="noscript">This birthday mission needs JavaScript. Open it in a modern browser.</p></noscript>
+</body>
+</html>
